@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="base :: stdHeaders">
+    <title>Write Message</title>
+</head>
+<body>
+<th:block th:replace="base :: header"></th:block>
+<form action="#" th:action="@{/message}" th:object="${message}" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="content">Message</label>
+        <input type="text" th:field="*{content}" class="form-control" name="content" id="content"
+               placeholder="Enter message"/>
+        <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span>
+    </div>
+    <br/>
+    <input type="submit" value="Post" class="btn btn-primary"/>
+</form>
+<div th:replace="base :: footer"></div>
+</body>
+</html>
