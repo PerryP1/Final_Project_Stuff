@@ -6,7 +6,8 @@
     <title>Welcome to Messages</title>
 </head>
 <body>
-<h2> Welcome to Messages</h2>
+<h1>Welcome to the PerryTweets!</h1>
+
 <div sec:authorize="isAuthenticated()">
     This content is only shown to authenticted users.<br/>
     <div sec:authorize="hasAuthority('ROLE_ADMIN')">
@@ -25,5 +26,7 @@
 <a href="/logout">Logout</a>-
 <a href="/register">Register</a>-
 <a href="/secure">Secure Page</a>
+<a href="/add">Add a message</a>
+<a href="/list">Show all messages</a>
 </body>
 </html>

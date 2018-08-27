@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a>Show All Tweets</a><br />
+Id:<span th:text="${message.id}" ></span><br />
+Content:<span th:text="${message.content}" ></span><br />
+Date Posted:<span th:text="${message.date}" ></span><br />
+Sent By:<span th:text="${message.username}" ></span><br />
+<a th:href="@{/redirect/{id}(id=${message.id})}">Go Back</a>
+</body>
+</html>
