@@ -16,6 +16,8 @@ public class Role {
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
     private Collection<User> users;
 
+
+
     public Role(String role) {//loaded construct
         this.role = role;
     }

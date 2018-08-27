@@ -3,7 +3,10 @@ package com.example.demo.Models;
 import com.example.demo.Models.Role;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -31,6 +34,18 @@ public class User {
     @Column(name = "username")
     private String username;
 
+//    @ManyToMany()
+//    private Set<User> friends;
+//
+//
+//    public User() {
+//        this.friends = new HashSet<User>();
+//    }
+
+
+    public User() {
+    }
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Collection<Role> roles;
@@ -44,8 +59,7 @@ public class User {
         this.username = username;
     }
 
-    public User() {// default construct
-    }
+
 
     public String getPassword() {
 //        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();

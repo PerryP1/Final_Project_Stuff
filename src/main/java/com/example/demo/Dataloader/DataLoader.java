@@ -33,10 +33,13 @@ public class DataLoader implements CommandLineRunner {
 
         roleRepository.save(new Role("USER"));
         roleRepository.save(new Role("ADMIN"));
+        roleRepository.save(new Role("FRIEND"));
+
 
 
         Role adminRole = roleRepository.findByRole("ADMIN");
         Role userRole = roleRepository.findByRole("USER");
+        Role friendRole = roleRepository.findByRole("FRIEND");
 
         User user = new
                 User("bob@bob.com", "password", "Bob", "Bobberson", true, "bob");
@@ -61,6 +64,12 @@ public class DataLoader implements CommandLineRunner {
                 User("sam@everyman.com", "password", "Sam", "Everyman", true, "sam");
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRoles(Arrays.asList(userRole, adminRole));
+        userRepository.save(user);
+
+        user = new
+                User("sam@everyman.com", "password", "Sam", "Everyman", true, "sam");
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRoles(Arrays.asList(userRole, friendRole));
         userRepository.save(user);
 
       Message message  = new Message("Hey Lets grab food","2012-05-05","Jenny");

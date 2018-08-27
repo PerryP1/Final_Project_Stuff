@@ -51,15 +51,13 @@
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <h1>Message Page</h1>
+            <h1>User Page</h1>
             <div class="inner">
                 <section>
-                    <h2>Chat </h2>
-                    <th:block th:each="message: ${messages}">
-                        Content:<span th:text="${message.content}"></span><br/>
-                        Date Posted:<span th:text="${message.posteddate}"></span><br/>
-
-                        Sent by:<span th:text="${message.sentby}"></span><br/>
+                    <h2>PerryTweets Users </h2>
+                    <th:block th:each="user: ${friendslist}">
+                        Email:<span th:text="${user.email}"></span><br/>
+                        First Name:<span th:text="${user.first_name}"><span><br/> </span></span>Last Name:<span th:text="${user.last_name}"></span><br/>
                         <br>
                         <br>
                         <br>

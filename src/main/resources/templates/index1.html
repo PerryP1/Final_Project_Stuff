@@ -49,7 +49,7 @@
 							<li><a th:href="@{/login}">Login</a></li>
 							<li><a th:href="@{/logout}">Logout</a></li>
 							<li><a th:href="@{/register}">Register</a></li>
-							<li><a th:href="@{/add}">Add a message</a></li>
+							<li><a th:href="@{/add}">Post a feed message</a></li>
 							<li><a th:href="@{/list}">Show all messages</a></li>
 						</ul>
 					</nav>
@@ -68,7 +68,7 @@
 										<img src="images/pic01.jpg" alt="" />
 									</span>
 									<a th:href="@{/list}">
-										<h2>Show Messages</h2>
+										<h2>Show Feed Messages</h2>
 										<div class="content">
 											<p>See whats going on at Perry Tweets today!.</p>
 										</div>
@@ -82,6 +82,28 @@
 										<h2>Add Message</h2>
 										<div class="content">
 											<p>Send a message on Perry Tweets. It might go Viral!</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/pic02.jpg" alt="" />
+									</span>
+									<a th:href="@{/userlist}">
+										<h2>See Users</h2>
+										<div class="content">
+											<p>See potential friends on PerryTweets!</p>
+										</div>
+									</a>
+								</article>
+								<article class="style1">
+									<span class="image">
+										<img src="images/pic01.jpg" alt="" />
+									</span>
+									<a th:href="@{/friendslist}">
+										<h2>Show Current Friends</h2>
+										<div class="content">
+											<p>See Current Friends!</p>
 										</div>
 									</a>
 								</article>

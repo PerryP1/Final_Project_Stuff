@@ -44,6 +44,14 @@ public class UserService {
         userRepository.save(user);
     }
 
+    public void saveFriend(User user) {
+        user.setRoles(Arrays.asList(roleRepository.findByRole("FRIEND")));
+        user.setEnabled(true);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        userRepository.save(user);
+    }
+
+
     public void saveAdmin(User user) {
         user.setRoles(Arrays.asList(roleRepository.findByRole("ADMIN")));
         user.setEnabled(true);

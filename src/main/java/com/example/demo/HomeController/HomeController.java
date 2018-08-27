@@ -1,8 +1,10 @@
 package com.example.demo.HomeController;
 
 import com.example.demo.Models.Message;
+import com.example.demo.Models.Role;
 import com.example.demo.Models.User;
 import com.example.demo.Repositories.MessageRepository;
+import com.example.demo.Repositories.RoleRepository;
 import com.example.demo.Repositories.UserRepository;
 import com.example.demo.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,9 @@ public class HomeController {
     private UserRepository userRepository;
 
     @Autowired
+    private RoleRepository roleRepository;
+
+    @Autowired
     private MessageRepository messageRepository;
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
@@ -51,6 +56,24 @@ public class HomeController {
         }
         return "index1";
     }
+
+    @RequestMapping("/userlist")
+    public String showUsers(Model model){
+        model.addAttribute("userlist", userRepository.findAll());
+        return "userlist";
+    }
+
+
+
+    @GetMapping("/friendslist")
+    public String showallfounditems(Model model, Role role){
+        model.addAttribute("friendslist", userRepository.findAllByRoles(role.getRole()));
+        return "friendslist";
+    }
+
+
+
+
 
     @RequestMapping("/")
     public String index() {
@@ -85,6 +108,7 @@ public class HomeController {
     @GetMapping("/add")
     public String messageForm(Model model){
 //        Creating new message and adding to model
+
         model.addAttribute("message", new Message());
         return "messageform";
     }
@@ -96,9 +120,37 @@ public class HomeController {
             return "messageform";
         }
 //        Saving message to repo h2 database
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentusername = authentication.getName();
+        User user = userRepository.findByUsername(currentusername);
+        message.setSentby(currentusername);
         messageRepository.save(message);
         return "redirect:/";
 
+    }
+
+    @RequestMapping("/addfriend/{id}")
+    public String addFriend(@PathVariable("id") long id, Model model) {
+        model.addAttribute("userlist", userRepository.findById(id));
+
+//        Need to check if user is Friend from Role Repository then add to model similar to auth check done here
+//        @RequestMapping("/secure")
+//        public String secure(HttpServletRequest request,
+//                Authentication authentication,
+//                Principal principal) {
+//            Boolean isAdmin = request.isUserInRole("ADMIN");
+//            Boolean isUser = request.isUserInRole("USER");
+//            UserDetails userDetails = (UserDetails)
+//                    authentication.getPrincipal();
+//            String username = principal.getName();
+//            return "secure";
+//
+//        }
+
+
+        model.addAttribute("friendslist", roleRepository.findByRole("FRIEND"));
+        return "redirect:/friendslist";
     }
 
     @RequestMapping("/list")
