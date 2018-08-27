@@ -5,161 +5,165 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="en" xmlns:th="www.thymeleaf.org"
-	  xmlns:sec="www.thymeleaf.org/extras/spring-security">
-	<head>
-		<title>Perry Tweets</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+      xmlns:sec="www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Perry Tweets</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
 
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="/static/assets/css/main.css">
-		<link rel="stylesheet" href="/static/assets/css/noscript.css">
-		<script src="/static/assets/js/breakpoints.min.js"></script>
-		<script src="/static/assets/js/browser.min.js"></script>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+    <link rel="stylesheet" href="/static/assets/css/noscript.css">
+    <script src="/static/assets/js/breakpoints.min.js"></script>
+    <script src="/static/assets/js/browser.min.js"></script>
+</head>
+<body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">PerryTweets</span>
-								</a>
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="symbol"><img src="images/logo.svg" alt=""/></span><span class="title">PerryTweets</span>
+            </a>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
 
-						</div>
-					</header>
+        </div>
+    </header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a th:href="@{/}">Home</a></li>
-							<li><a th:href="@{/login}">Login</a></li>
-							<li><a th:href="@{/logout}">Logout</a></li>
-							<li><a th:href="@{/register}">Register</a></li>
-							<li><a th:href="@{/add}">Post a feed message</a></li>
-							<li><a th:href="@{/list}">Show all messages</a></li>
-						</ul>
-					</nav>
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="@{/logout}">Logout</a></li>
+            <li><a th:href="@{/register}">Register</a></li>
+            <li><a th:href="@{/add}">Post a feed message</a></li>
+            <li><a th:href="@{/list}">Show all messages</a></li>
+        </ul>
+    </nav>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<h1>This is PerryTweets, a free, fully responsive site<br />
-								template designed by <a href="https://www.linkedin.com/in/perry-publico-8a0071156">Perry Publico</a>.</h1>
-								<p>This site was designed with H2, Spring Boot,Thymeleaf,HTML and CSS.</p>
-							</header>
-							<section class="tiles">
-								<article class="style1">
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <header>
+                <h1>This is PerryTweets, a free, fully responsive site<br/>
+                    template designed by <a href="https://www.linkedin.com/in/perry-publico-8a0071156">Perry Publico</a>.
+                </h1>
+                <p>This site was designed with H2, Spring Boot,Thymeleaf,HTML and CSS.</p>
+            </header>
+            <section class="tiles">
+                <article class="style1">
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="images/pic01.jpg" alt=""/>
 									</span>
-									<a th:href="@{/list}">
-										<h2>Show Feed Messages</h2>
-										<div class="content">
-											<p>See whats going on at Perry Tweets today!.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
+                    <a th:href="@{/list}">
+                        <h2>Show Feed Messages</h2>
+                        <div class="content">
+                            <p>See whats going on at Perry Tweets today!.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="style2">
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="images/pic02.jpg" alt=""/>
 									</span>
-									<a th:href="@{/add}">
-										<h2>Add Message</h2>
-										<div class="content">
-											<p>Send a message on Perry Tweets. It might go Viral!</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
+                    <a th:href="@{/add}">
+                        <h2>Add Message</h2>
+                        <div class="content">
+                            <p>Send a message on Perry Tweets. It might go Viral!</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="style2">
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="images/pic02.jpg" alt=""/>
 									</span>
-									<a th:href="@{/userlist}">
-										<h2>See Users</h2>
-										<div class="content">
-											<p>See potential friends on PerryTweets!</p>
-										</div>
-									</a>
-								</article>
-								<article class="style1">
+                    <a th:href="@{/userlist}">
+                        <h2>See Users</h2>
+                        <div class="content">
+                            <p>See potential friends on PerryTweets!</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="style1">
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="images/pic01.jpg" alt=""/>
 									</span>
-									<a th:href="@{/friendslist}">
-										<h2>Show Current Friends</h2>
-										<div class="content">
-											<p>See Current Friends!</p>
-										</div>
-									</a>
-								</article>
-							</section>
-						</div>
-					</div>
+                    <a th:href="@{/friendslist}">
+                        <h2>Show Current Friends</h2>
+                        <div class="content">
+                            <p>See Current Friends!</p>
+                        </div>
+                    </a>
+                </article>
+            </section>
+        </div>
+    </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch with Perry!</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">Perry Tweets</a></li>
-							</ul>
-						</div>
-					</footer>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <section>
+                <h2>Get in touch with Perry!</h2>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field half">
+                            <input type="text" name="name" id="name" placeholder="Name"/>
+                        </div>
+                        <div class="field half">
+                            <input type="email" name="email" id="email" placeholder="Email"/>
+                        </div>
+                        <div class="field">
+                            <textarea name="message" id="message" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send" class="primary"/></li>
+                    </ul>
+                </form>
+            </section>
+            <section>
+                <h2>Follow</h2>
+                <ul class="icons">
+                    <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+                    <li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+                    <li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+                    <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+                </ul>
+            </section>
+            <ul class="copyright">
+                <li>&copy; Untitled. All rights reserved</li>
+                <li>Design: <a href="http://html5up.net">Perry Tweets</a></li>
+            </ul>
+        </div>
+    </footer>
 
-			</div>
+</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
 </html>

@@ -25,14 +25,14 @@ public class Message {
     private long id;
 
     @NotNull
-    @Size(min=3,max=140)
+    @Size(min = 3, max = 140)
     private String content;
 
 
     private String posteddate;
 
     @NotNull
-    @Size(min=3)
+    @Size(min = 3)
     private String sentby;
 
     public long getId() {

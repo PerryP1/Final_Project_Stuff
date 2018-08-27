@@ -55,7 +55,6 @@ public class User {
     }
 
 
-
     public String getPassword() {
 //        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 //        String hashedPassword=passwordEncoder.encode(password);

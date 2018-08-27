@@ -17,7 +17,6 @@ public class Role {
     private Collection<User> users;
 
 
-
     public Role(String role) {//loaded construct
         this.role = role;
     }

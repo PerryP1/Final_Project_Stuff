@@ -51,21 +51,17 @@ public class HomeController {
     }
 
     @RequestMapping("/userlist")
-    public String showUsers(Model model){
+    public String showUsers(Model model) {
         model.addAttribute("userlist", userRepository.findAll());
         return "userlist";
     }
 
 
-
     @GetMapping("/friendslist")
-    public String showallfounditems(Model model, Role role){
+    public String showallfounditems(Model model, Role role) {
         model.addAttribute("friendslist", userRepository.findAllByRoles(role.getRole()));
         return "friendslist";
     }
-
-
-
 
 
     @RequestMapping("/")
@@ -99,17 +95,17 @@ public class HomeController {
     }
 
     @GetMapping("/add")
-    public String messageForm(Model model){
+    public String messageForm(Model model) {
 //        Creating new message and adding to model
 
         model.addAttribute("message", new Message());
         return "messageform";
     }
+
     @PostMapping("/process")
-    public String processForm(@Valid Message message, BindingResult result)
-    {
+    public String processForm(@Valid Message message, BindingResult result) {
 //        Checking message for errors and redirecting to index page
-        if(result.hasErrors()){
+        if (result.hasErrors()) {
             return "messageform";
         }
 //        Saving message to repo h2 database
@@ -147,15 +143,17 @@ public class HomeController {
     }
 
     @RequestMapping("/list")
-    public String showMessages(Model model){
+    public String showMessages(Model model) {
         model.addAttribute("messages", messageRepository.findAll());
         return "list";
     }
+
     @RequestMapping("/content/{id}")
     public String showContent(@PathVariable("id") long id, Model model) {
         model.addAttribute("message", messageRepository.findById(id));
         return "show";
     }
+
     @RequestMapping("/posteddate/{id}")
     public String showDate(@PathVariable("id") long id, Model model) {
         model.addAttribute("message", messageRepository.findById(id));

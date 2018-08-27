@@ -30,7 +30,6 @@ public class DataLoader implements CommandLineRunner {
         roleRepository.save(new Role("FRIEND"));
 
 
-
         Role adminRole = roleRepository.findByRole("ADMIN");
         Role userRole = roleRepository.findByRole("USER");
         Role friendRole = roleRepository.findByRole("FRIEND");
@@ -66,17 +65,17 @@ public class DataLoader implements CommandLineRunner {
         user.setRoles(Arrays.asList(userRole, friendRole));
         userRepository.save(user);
 
-      Message message  = new Message("Hey Lets grab food","2012-05-05","Jenny");
+        Message message = new Message("Hey Lets grab food", "2012-05-05", "Jenny");
         messageRepository.save(message);
 
 
-        Message message1  = new Message("Sure what time and where?","yyyy-MM-dd","Bob");
+        Message message1 = new Message("Sure what time and where?", "yyyy-MM-dd", "Bob");
         messageRepository.save(message1);
 
-        Message message2  = new Message("2pm the Jerk Spot","yyyy-MM-dd","Jenny");
+        Message message2 = new Message("2pm the Jerk Spot", "yyyy-MM-dd", "Jenny");
         messageRepository.save(message2);
 
-        Message message3  = new Message("Alright","yyyy-MM-dd","Bob");
+        Message message3 = new Message("Alright", "yyyy-MM-dd", "Bob");
         messageRepository.save(message3);
     }
 }
