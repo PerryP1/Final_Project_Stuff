@@ -1,12 +1,5 @@
-package com.example.demo.HomeController;
+package com.example.demo;
 
-import com.example.demo.Models.Message;
-import com.example.demo.Models.Role;
-import com.example.demo.Models.User;
-import com.example.demo.Repositories.MessageRepository;
-import com.example.demo.Repositories.RoleRepository;
-import com.example.demo.Repositories.UserRepository;
-import com.example.demo.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

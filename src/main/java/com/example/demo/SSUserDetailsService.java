@@ -1,8 +1,5 @@
-package com.example.demo.Security;
+package com.example.demo;
 
-import com.example.demo.Models.Role;
-import com.example.demo.Models.User;
-import com.example.demo.Repositories.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

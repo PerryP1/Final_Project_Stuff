@@ -1,10 +1,10 @@
-//package com.example.demo.Models;
+package com.example.demo;//package com.example.demo.Models;
 //import jgravatar.Gravatar;
 //import jgravatar.GravatarDefaultImage;
 //import jgravatar.GravatarRating;
 //
 ///**
-// * Created by ${TravisGray} on 8/27/2018.
+// * Created by ${PerryP1} on 8/27/2018.
 // */
 //public class Gravatar {
 //

@@ -1,11 +1,5 @@
-package com.example.demo.Dataloader;
+package com.example.demo;
 
-import com.example.demo.Models.Message;
-import com.example.demo.Models.Role;
-import com.example.demo.Models.User;
-import com.example.demo.Repositories.MessageRepository;
-import com.example.demo.Repositories.RoleRepository;
-import com.example.demo.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;

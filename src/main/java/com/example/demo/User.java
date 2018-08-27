@@ -1,12 +1,7 @@
-package com.example.demo.Models;
-
-import com.example.demo.Models.Role;
+package com.example.demo;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
 
 
 @Entity
